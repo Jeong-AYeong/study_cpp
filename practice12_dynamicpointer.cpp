@@ -1,3 +1,21 @@
+/******************************************************************************************************************************************************
+1. mystrcat [Easy]
+- Write a function 'mystrcat' that concatenates two character arrays.
+It should dynamically allocate memory equal to the sum of the lengths of the two arrays, and concatenate them into that space, and return its address.
+- 두 문자열 배열을 합치는 mystrcat함수를 작성하세요.
+이것은 두 배열의 길이만큼 동적으로 메모리를 할당받아야하며, 그 공간을 통해 그것들을 합치고, 해당 주소를 반환해야 합니다. 
+****************************************************************************************************************************************************/
+
+
+
+
+/****************************************************************
+2. Reverse linked list [Normal]
+- Write a function that reverses the order of the linked list. 
+- If you want, you can write your own linked list.
+- 링크드 리스트의 순서를 뒤집는 함수를 만들어봅시다 :)
+- 필요하다면 링크드 리스트는 새로 만드셔도 됩니다.
+********************************************************************/
 #include <iostream>
 using namespace std;
 
@@ -58,7 +76,7 @@ int main() {
         cout << loop->value << endl;
     }
 
-    r_head = reverse(head); // �� Write this function
+    r_head = reverse(head); // ¡ç Write this function
 
     cout << "Reversed" << endl;
 
