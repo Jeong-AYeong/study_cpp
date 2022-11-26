@@ -33,4 +33,32 @@ int main() {
 - source: Pointer to the source of data to be copied, type-casted to a pointer of type const void*.
 - num: Number of bytes to copy. size_t is an unsigned integral type.
 **************************************************************************************/
+#include <iostream>
+using namespace std;
 
+void* my_memcpy(void* destination, const void* source, size_t num)
+{
+    char* ptr = (char *)source;
+    char* qtr = (char*)destination;
+    for (int i = 0; i < num; i++) {
+        *(qtr +i) = *(ptr + i);
+    }
+    destination = qtr;
+    return destination;
+}
+
+int main() {
+    char csrc[] = "Hello!";
+    char cdst[16];
+
+    int isrc = 12345678;
+    int idst;
+
+    my_memcpy(cdst, csrc, sizeof(csrc));
+    my_memcpy(&idst, &isrc, sizeof(isrc));
+
+    cout << cdst << endl;
+    cout << idst << endl;
+
+    return 0;
+}
