@@ -58,3 +58,41 @@ Queue has three main operations; enqueue, dequeue, and peek.
 Enqueue (큐의 꼬리에 데이터를 집어 넣는 것), Dequeue (큐의 머리에서 데이터를 가져 오는 것),
 Peek (머리의 데이터만 참조하는 것)을 멤버로 가지는 큐 클래스를 만들어 보세요!
 ******************************************************************************************/
+#include <iostream>
+using namespace std;
+
+class my_queue {
+private:
+	int queue[16];
+	int head;
+	int tail;
+
+public:
+	my_queue() {
+		head = 0;
+		tail = 0;
+	}
+	void Enqueue(int p) {
+		queue[tail++] = p;
+	};
+	int Dequeue() {
+		return queue[head++];
+	};
+	int Peek() {
+		return queue[head];
+	};
+	~my_queue() {}
+};
+
+int main() {
+	my_queue q;
+
+	q.Enqueue(10);
+	q.Enqueue(20);
+	q.Enqueue(30);
+
+	q.Dequeue();
+	q.Dequeue();
+
+	cout << q.Peek() << endl;
+}
